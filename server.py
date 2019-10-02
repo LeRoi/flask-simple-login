@@ -92,12 +92,10 @@ def login():
         }
         next_sid += 1
         return login_result
-    return '''
-        <form method="post">
+    return '''<form method="post">
             <p><input type=text name=username>
             <p><input type=submit value=Login>
-        </form>
-    '''
+        </form>'''
 
 @app.route('/logout')
 def logout():
@@ -111,5 +109,3 @@ def logout():
 if __name__ == '__main_':
     port = int(os.environ.get('PORT', Server.PORT))
     app.run(host=Server.HOST, port=port, debug=debug)
-
-    
